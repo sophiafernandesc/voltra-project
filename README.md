@@ -84,8 +84,7 @@ Motoristas brasileiros que:
 
 ## 🖼️ Interface (UI/UX)
 
-As telas seguem a linha visual inspirada no projeto *TrackCar*, mas com adequações completas para as novas funcionalidades e identidade do **VOLTRA**.
-
+Repositório Figma: https://www.figma.com/design/FsyTdu0DmyYDz0sEgpbS6h/Voltra?node-id=28-159&p=f&t=LWggTVPleiLZkM7w-0
 ### Estrutura de Telas:
 - **Tela de Boas-Vindas / Onboarding**
 - **Login e Cadastro de Usuário**
