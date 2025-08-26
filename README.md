@@ -100,10 +100,10 @@ As telas seguem a linha visual inspirada no projeto *TrackCar*, mas com adequaç
 ## 🛠️ Tecnologias e Ferramentas
 
 - **Figma** – Prototipação e UI Design  
-- **React Native / Flutter** (a definir) – Desenvolvimento mobile  
+- ** Flutter** (a definir) – Desenvolvimento mobile  
 - **Mapbox API** – Geolocalização e visualização de estações  
 - **Firebase** – Autenticação, notificações e backend básico  
-- **Arduino + Sensores** – Simulação da análise de combustível
+- **ESP32+ Sensores** – Simulação da análise de combustível
 
 ---
 
