@@ -106,19 +106,10 @@ Repositório Figma: https://www.figma.com/design/FsyTdu0DmyYDz0sEgpbS6h/Voltra?n
 
 ---
 
-## 📌 Repositório
-
-Todo o código-fonte, protótipos e documentação estarão disponíveis neste repositório:
-
-🔗 [https://github.com/SophiaCFernandes/Voltra](https://github.com/SophiaCFernandes/Voltra)
-
-> **Nota:** o nome correto do projeto é **VOLTRA**. Ignore qualquer mutação anterior do nome inventada por colegas confusos.
-
----
 
 ## 📎 Contribuição
 
-Como este é um projeto acadêmico em grupo, colaborações são bem-vindas (mesmo quando são involuntárias ou confusas). Se você faz parte do time e quer adicionar sua ideia ao caos organizado que chamamos de "app", abra uma issue ou envie um pull request.
+Como este é um projeto acadêmico em grupo, colaborações são bem-vindas. Se você faz parte do time e quer adicionar sua ideia ao caos organizado que chamamos de "app", abra uma issue ou envie um pull request.
 
 ---
 
