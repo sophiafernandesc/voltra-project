@@ -1,4 +1,4 @@
-# VOLTRA
+# VOLTRA⚡
 
 > Aplicativo de gestão inteligente para veículos elétricos, híbridos e a combustão – com foco em mobilidade, segurança e eficiência energética.
 
@@ -123,6 +123,6 @@ Como este é um projeto acadêmico em grupo, colaborações são bem-vindas (mes
 
 ---
 
-## 🧃 Considerações Finais
+## 🔌 Considerações Finais
 
 **VOLTRA** é uma tentativa sincera de unir mobilidade, sustentabilidade e segurança em uma solução única. Mesmo com todas as opiniões divergentes, brainstorms que deveriam ter sido emails e debates sobre o nome do projeto que ninguém venceu, estamos comprometidos com a entrega de um app funcional, intuitivo e, acima de tudo, útil.
