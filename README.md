@@ -58,9 +58,6 @@ Motoristas brasileiros que:
 - **Conformidade Legal**  
   Indicação se o combustível atende os padrões da legislação brasileira.
 
-- **Assistente de Direção Econômica**  
-  Sugestões personalizadas para melhorar o consumo com base em hábitos de direção e manutenção.
-
 ---
 
 ### 🔐 Segurança Veicular
@@ -70,9 +67,6 @@ Motoristas brasileiros que:
 
 - **Histórico de Rotas**  
   Registro completo de trajetos realizados.
-
-- **Geofencing (Cerca Virtual)**  
-  Alertas caso o veículo ultrapasse uma área definida pelo usuário.
 
 - **Notificações de Segurança**  
   Alertas por push em caso de movimentação não autorizada ou ignição indevida.
@@ -99,7 +93,7 @@ Repositório Figma: https://www.figma.com/design/FsyTdu0DmyYDz0sEgpbS6h/Voltra?n
 ## 🛠️ Tecnologias e Ferramentas
 
 - **Figma** – Prototipação e UI Design  
-- ** Flutter** (a definir) – Desenvolvimento mobile  
+- **Flutter** (a definir) – Desenvolvimento mobile  
 - **Mapbox API** – Geolocalização e visualização de estações  
 - **Firebase** – Autenticação, notificações e backend básico  
 - **ESP32+ Sensores** – Simulação da análise de combustível
