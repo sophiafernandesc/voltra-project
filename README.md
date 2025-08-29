@@ -106,7 +106,3 @@ Repositório Figma: https://www.figma.com/design/FsyTdu0DmyYDz0sEgpbS6h/Voltra?n
 Como este é um projeto acadêmico em grupo, colaborações são bem-vindas. Se você faz parte do time e quer adicionar sua ideia ao caos organizado que chamamos de "app", abra uma issue ou envie um pull request.
 
 ---
-
-## 🔌 Considerações Finais
-
-**VOLTRA** é uma tentativa sincera de unir mobilidade, sustentabilidade e segurança em uma solução única. Mesmo com todas as opiniões divergentes, brainstorms que deveriam ter sido emails e debates sobre o nome do projeto que ninguém venceu, estamos comprometidos com a entrega de um app funcional, intuitivo e, acima de tudo, útil.
