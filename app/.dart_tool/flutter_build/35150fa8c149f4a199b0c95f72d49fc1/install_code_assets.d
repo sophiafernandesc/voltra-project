@@ -1,0 +1,1 @@
+ C:\\Users\\diogo\\OneDrive\\Área\ de\ Trabalho\\PUC\\PI1\\location_tracking_app\\location_tracking_app\\.dart_tool\\flutter_build\\35150fa8c149f4a199b0c95f72d49fc1\\native_assets.json: 
