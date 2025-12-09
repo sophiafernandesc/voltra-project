@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "400802425980",
+    "project_id": "voltra-9011a",
+    "storage_bucket": "voltra-9011a.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:400802425980:android:e8a7f5afd6ff9013bf6df9",
+        "android_client_info": {
+          "package_name": "com.example.location_tracking_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyASMoPg2LWIAS7C6Z6SQbOemoHdTdjNG80"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
