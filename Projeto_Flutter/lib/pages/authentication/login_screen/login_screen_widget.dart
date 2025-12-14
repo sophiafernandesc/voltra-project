@@ -391,7 +391,7 @@ class _LoginScreenWidgetState extends State<LoginScreenWidget>
                                       FFAppState().update(() {});
 
                                       context
-                                          .goNamed(HomeScreenWidget.routeName);
+                                          .goNamed(ObdPage.routeName);
                                     },
                                     text: 'Entrar',
                                     options: FFButtonOptions(
@@ -858,7 +858,7 @@ class _LoginScreenWidgetState extends State<LoginScreenWidget>
                                       FFAppState().update(() {});
 
                                       context
-                                          .goNamed(HomeScreenWidget.routeName);
+                                          .goNamed(ObdPage.routeName);
                                     },
                                     text: 'Cadastrar',
                                     options: FFButtonOptions(

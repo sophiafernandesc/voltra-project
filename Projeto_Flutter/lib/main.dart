@@ -117,7 +117,7 @@ class _NavBarPageState extends State<NavBarPage> {
   @override
   Widget build(BuildContext context) {
     final tabs = {
-      'HomeScreen': HomeScreenWidget(),
+      'HomeScreen': ObdPage(),
       'LocationScreen': LocationScreenWidget(),
       'ScheduleScreen': ScheduleScreenWidget(),
       'ProfileScreen': ProfileScreenWidget(),

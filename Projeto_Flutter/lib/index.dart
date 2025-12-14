@@ -1,5 +1,5 @@
 // Export pages
-export '/pages/home/home_screen/home_screen_widget.dart' show HomeScreenWidget;
+export '/pages/home/home_screen/home_screen_widget.dart' show ObdPage;
 export '/pages/intro/splash_screen/splash_screen_widget.dart'
     show SplashScreenWidget;
 export '/pages/authentication/login_screen/login_screen_widget.dart'
