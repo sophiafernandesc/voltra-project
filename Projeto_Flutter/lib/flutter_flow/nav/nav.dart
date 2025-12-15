@@ -64,11 +64,11 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
               : SplashScreenWidget(),
         ),
         FFRoute(
-          name: HomeScreenWidget.routeName,
-          path: HomeScreenWidget.routePath,
+          name: ObdPage.routeName,
+          path: ObdPage.routePath,
           builder: (context, params) => params.isEmpty
               ? NavBarPage(initialPage: 'HomeScreen')
-              : HomeScreenWidget(),
+              : ObdPage(),
         ),
         FFRoute(
           name: SplashScreenWidget.routeName,

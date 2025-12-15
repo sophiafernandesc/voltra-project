@@ -108,7 +108,7 @@ class _NavBarPageState extends State<NavBarPage> {
   Widget build(BuildContext context) {
     // --- [ALTERAÇÃO 1] Atualizamos a lista de abas ---
     final tabs = {
-      'HomeScreen': HomeScreenWidget(),
+      'HomeScreen': ObdPage(),
       'LocationScreen': LocationScreenWidget(),
       'TrackerInfoScreen': TrackerInfoScreenWidget(), // Nova tela aqui
       'ProfileScreen': ProfileScreenWidget(),
