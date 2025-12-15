@@ -8,15 +8,6 @@ import 'package:fl_chart/fl_chart.dart';
 import '../../../models/report_model.dart';
 import '../../../services/report_service.dart';
 
-/// Ponto de entrada da aplicação
-/// Inicia um MaterialApp com a ObdPage como tela inicial
-void main() {
-  runApp(const MaterialApp(
-    debugShowCheckedModeBanner: false,
-    home: ObdPage(),
-  ));
-}
-
 /// Página principal que gerencia a conexão Bluetooth com dispositivo OBD-II
 /// e exibe dados do veículo em tempo real
 class ObdPage extends StatefulWidget {
