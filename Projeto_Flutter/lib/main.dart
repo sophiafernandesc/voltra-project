@@ -1,4 +1,4 @@
-import 'package:firebase_core/firebase_core.dart'; 
+import 'package:firebase_core/firebase_core.dart';
 import 'firebase_options.dart';
 import 'package:provider/provider.dart';
 import 'package:flutter/material.dart';
@@ -11,21 +11,45 @@ import 'index.dart'; // Importa a nova tela daqui
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  debugPrint("🚀 App starting...");
 
-  await Firebase.initializeApp(
-    options: DefaultFirebaseOptions.currentPlatform,
-  );
+  try {
+    debugPrint("🔥 Initializing Firebase...");
+    await Firebase.initializeApp(
+      options: DefaultFirebaseOptions.currentPlatform,
+    );
+    debugPrint("✅ Firebase initialized");
+  } catch (e) {
+    debugPrint("❌ Firebase error: $e");
+    // Continua mesmo se Firebase falhar
+  }
 
-  GoRouter.optionURLReflectsImperativeAPIs = true;
-  usePathUrlStrategy();
+  try {
+    GoRouter.optionURLReflectsImperativeAPIs = true;
+    usePathUrlStrategy();
+    debugPrint("✅ Router configured");
+  } catch (e) {
+    debugPrint("❌ Router error: $e");
+  }
 
-  final appState = FFAppState(); 
-  await appState.initializePersistedState();
+  try {
+    debugPrint("💾 Initializing app state...");
+    final appState = FFAppState();
+    await appState.initializePersistedState();
+    debugPrint("✅ App state initialized");
 
-  runApp(ChangeNotifierProvider(
-    create: (context) => appState,
-    child: MyApp(),
-  ));
+    runApp(ChangeNotifierProvider(
+      create: (context) => appState,
+      child: MyApp(),
+    ));
+  } catch (e) {
+    debugPrint("❌ App state error: $e");
+    // Fallback: inicia o app mesmo sem estado persistido
+    runApp(ChangeNotifierProvider(
+      create: (context) => FFAppState(),
+      child: MyApp(),
+    ));
+  }
 }
 
 class MyApp extends StatefulWidget {
@@ -120,11 +144,11 @@ class _NavBarPageState extends State<NavBarPage> {
       body: _currentPage ?? tabs[_currentPageName],
       bottomNavigationBar: Container(
         width: double.infinity,
-        height: 70.0, 
-        color: FlutterFlowTheme.of(context).primaryText, 
+        height: 70.0,
+        color: FlutterFlowTheme.of(context).primaryText,
         child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceAround, 
-          crossAxisAlignment: CrossAxisAlignment.center,    
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             // 1. HOME
             InkWell(
@@ -165,7 +189,9 @@ class _NavBarPageState extends State<NavBarPage> {
               }),
               child: Icon(
                 // Usa ícone preenchido se selecionado, contorno se não
-                currentIndex == 2 ? Icons.directions_car_filled : Icons.directions_car_outlined,
+                currentIndex == 2
+                    ? Icons.directions_car_filled
+                    : Icons.directions_car_outlined,
                 size: 32.0,
                 color: currentIndex == 2
                     ? FlutterFlowTheme.of(context).primary
@@ -180,7 +206,9 @@ class _NavBarPageState extends State<NavBarPage> {
                 _currentPageName = tabs.keys.toList()[3];
               }),
               child: Icon(
-                currentIndex == 3 ? FFIcons.kacProfile : Icons.person_outline_sharp,
+                currentIndex == 3
+                    ? FFIcons.kacProfile
+                    : Icons.person_outline_sharp,
                 size: 32.0,
                 color: currentIndex == 3
                     ? FlutterFlowTheme.of(context).primary
