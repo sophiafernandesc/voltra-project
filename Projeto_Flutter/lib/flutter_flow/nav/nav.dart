@@ -119,7 +119,7 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           path: EditProfileScreenWidget.routePath,
           builder: (context, params) => EditProfileScreenWidget(),
         ),
-        FFRoute(
+        /*FFRoute(
           name: SecurityScreenWidget.routeName,
           path: SecurityScreenWidget.routePath,
           builder: (context, params) => SecurityScreenWidget(),
@@ -133,7 +133,7 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           name: HelpScreenWidget.routeName,
           path: HelpScreenWidget.routePath,
           builder: (context, params) => HelpScreenWidget(),
-        ),
+        ),*/
         FFRoute(
           name: BookmarkScreenWidget.routeName,
           path: BookmarkScreenWidget.routePath,

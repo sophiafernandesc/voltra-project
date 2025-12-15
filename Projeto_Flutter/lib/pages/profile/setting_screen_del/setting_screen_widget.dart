@@ -100,7 +100,7 @@ class _SettingScreenWidgetState extends State<SettingScreenWidget>
                         hoverColor: Colors.transparent,
                         highlightColor: Colors.transparent,
                         onTap: () async {
-                          context.pushNamed(HelpScreenWidget.routeName);
+                          //context.pushNamed(HelpScreenWidget.routeName);
                         },
                         child: Container(
                           decoration: BoxDecoration(

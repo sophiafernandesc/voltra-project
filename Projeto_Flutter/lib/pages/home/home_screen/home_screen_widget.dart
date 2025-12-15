@@ -6,6 +6,7 @@ import 'package:flutter_bluetooth_serial/flutter_bluetooth_serial.dart';
 import 'package:permission_handler/permission_handler.dart';
 import 'package:fl_chart/fl_chart.dart';
 import '../../../models/report_model.dart';
+import '../../../services/report_service.dart';
 
 /// Ponto de entrada da aplicação
 /// Inicia um MaterialApp com a ObdPage como tela inicial
@@ -40,6 +41,10 @@ class _ObdPageState extends State<ObdPage> {
   // ==================== MODO DE SIMULAÇÃO ====================
   bool simulationMode = false;
   Timer? simulationTimer;
+
+  // ==================== FIREBASE ====================
+  final ReportService _reportService = ReportService();
+  bool isSaving = false;
 
   // ==================== DADOS DO VEÍCULO ====================
   String speedValue = "--";
@@ -532,8 +537,14 @@ class _ObdPageState extends State<ObdPage> {
     });
   }
 
-  /// Salva o relatório atual e inicia um novo
-  void saveReportAndReset() {
+  /// Salva o relatório atual no Firestore e inicia um novo
+  Future<void> saveReportAndReset() async {
+    if (isSaving) return; // Evita duplo clique
+
+    setState(() {
+      isSaving = true;
+    });
+
     // Cria o relatório com os dados atuais
     final report = ReportModel(
       id: DateTime.now().millisecondsSinceEpoch.toString(),
@@ -548,29 +559,75 @@ class _ObdPageState extends State<ObdPage> {
       consumptionHistory: List.from(consumptionHistory),
     );
 
-    // TODO: Salvar no Firebase futuramente
-    debugPrint("Relatório salvo: ${report.toJson()}");
+    try {
+      // Salva no Firebase Firestore
+      final savedId = await _reportService.saveReport(report);
 
-    // Mostra confirmação
-    ScaffoldMessenger.of(context).showSnackBar(
-      SnackBar(
-        content: Text(
-            'Relatório salvo! Distância: ${totalDistance.toStringAsFixed(1)} km, '
-            'Consumo: ${averageFuelConsumption.toStringAsFixed(1)} Km/L'),
-        backgroundColor: Colors.green,
-        duration: const Duration(seconds: 3),
-      ),
-    );
+      if (savedId != null) {
+        debugPrint("✅ Relatório salvo no Firestore com ID: $savedId");
 
-    // Reseta os dados para novo relatório
-    setState(() {
-      totalDistance = 0.0;
-      totalFuelUsed = 0.0;
-      lastFuelLevel = double.tryParse(fuelLevelValue) ?? -1.0;
-      speedReadings.clear();
-      consumptionHistory.clear();
-      reportStartTime = DateTime.now();
-    });
+        // Mostra confirmação de sucesso
+        if (mounted) {
+          ScaffoldMessenger.of(context).showSnackBar(
+            SnackBar(
+              content: Row(
+                children: [
+                  const Icon(Icons.cloud_done, color: Colors.white),
+                  const SizedBox(width: 12),
+                  Expanded(
+                    child: Text(
+                      'Relatório salvo! Distância: ${totalDistance.toStringAsFixed(1)} km, '
+                      'Consumo: ${averageFuelConsumption.toStringAsFixed(1)} Km/L',
+                    ),
+                  ),
+                ],
+              ),
+              backgroundColor: Colors.green,
+              duration: const Duration(seconds: 3),
+            ),
+          );
+        }
+
+        // Reseta os dados para novo relatório
+        setState(() {
+          totalDistance = 0.0;
+          totalFuelUsed = 0.0;
+          lastFuelLevel = double.tryParse(fuelLevelValue) ?? -1.0;
+          speedReadings.clear();
+          consumptionHistory.clear();
+          reportStartTime = DateTime.now();
+        });
+      } else {
+        throw Exception('Falha ao salvar - usuário não autenticado');
+      }
+    } catch (e) {
+      debugPrint("❌ Erro ao salvar relatório: $e");
+
+      // Mostra erro
+      if (mounted) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(
+            content: Row(
+              children: [
+                const Icon(Icons.error_outline, color: Colors.white),
+                const SizedBox(width: 12),
+                Expanded(
+                  child: Text('Erro ao salvar: $e'),
+                ),
+              ],
+            ),
+            backgroundColor: Colors.red,
+            duration: const Duration(seconds: 4),
+          ),
+        );
+      }
+    } finally {
+      if (mounted) {
+        setState(() {
+          isSaving = false;
+        });
+      }
+    }
   }
 
   // ==================== WIDGETS DE UI ====================

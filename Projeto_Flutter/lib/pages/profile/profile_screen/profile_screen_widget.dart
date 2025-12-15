@@ -332,7 +332,7 @@ class _ProfileScreenWidgetState extends State<ProfileScreenWidget>
                             ),
                           ).animateOnPageLoad(
                               animationsMap['containerOnPageLoadAnimation1']!),
-                          InkWell(
+                          /*InkWell(
                             splashColor: Colors.transparent,
                             focusColor: Colors.transparent,
                             hoverColor: Colors.transparent,
@@ -405,8 +405,8 @@ class _ProfileScreenWidgetState extends State<ProfileScreenWidget>
                               ),
                             ),
                           ).animateOnPageLoad(
-                              animationsMap['containerOnPageLoadAnimation2']!),
-                          InkWell(
+                              animationsMap['containerOnPageLoadAnimation2']!),*/
+                          /*InkWell(
                             splashColor: Colors.transparent,
                             focusColor: Colors.transparent,
                             hoverColor: Colors.transparent,
@@ -479,7 +479,7 @@ class _ProfileScreenWidgetState extends State<ProfileScreenWidget>
                               ),
                             ),
                           ).animateOnPageLoad(
-                              animationsMap['containerOnPageLoadAnimation3']!),
+                              animationsMap['containerOnPageLoadAnimation3']!),*/
                           InkWell(
                             splashColor: Colors.transparent,
                             focusColor: Colors.transparent,

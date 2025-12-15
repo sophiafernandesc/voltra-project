@@ -263,7 +263,7 @@ class _LoginScreenWidgetState extends State<LoginScreenWidget>
                                             FFAppState().isLogin = true;
                                           });
 
-                                          context.goNamed(HomeScreenWidget.routeName);
+                                          context.goNamed(ObdPage.routeName);
                                         } else {
                                           ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text('Erro: Usuário sem dados no banco.')));
                                         }
