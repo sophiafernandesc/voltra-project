@@ -52,43 +52,33 @@ class _BookmarkScreenWidgetState extends State<BookmarkScreenWidget> {
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 16),
       child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text(
-                'Relatórios OBD2',
-                style: FlutterFlowTheme.of(context).headlineMedium.override(
-                      fontFamily: 'SF Pro Display',
-                      color: FlutterFlowTheme.of(context).primaryText,
-                      fontSize: 24,
-                      fontWeight: FontWeight.bold,
-                      useGoogleFonts: false,
-                    ),
+          // Botão Voltar
+          GestureDetector(
+            onTap: () => Navigator.of(context).pop(),
+            child: Container(
+              padding: const EdgeInsets.all(10),
+              decoration: BoxDecoration(
+                color: Colors.amber.withValues(alpha: 0.15),
+                borderRadius: BorderRadius.circular(12),
               ),
-              const SizedBox(height: 4),
-              Text(
-                'Histórico de viagens',
-                style: FlutterFlowTheme.of(context).bodyMedium.override(
-                      fontFamily: 'SF Pro Display',
-                      color: FlutterFlowTheme.of(context).secondaryText,
-                      useGoogleFonts: false,
-                    ),
+              child: const Icon(
+                Icons.arrow_back_ios_new,
+                color: Colors.amber,
+                size: 20,
               ),
-            ],
-          ),
-          Container(
-            padding: const EdgeInsets.all(10),
-            decoration: BoxDecoration(
-              color:
-                  FlutterFlowTheme.of(context).primary.withValues(alpha: 0.1),
-              borderRadius: BorderRadius.circular(12),
             ),
-            child: Icon(
-              Icons.analytics_outlined,
-              color: FlutterFlowTheme.of(context).primary,
-              size: 28,
+          ),
+          const SizedBox(width: 16),
+          // Título
+          const Expanded(
+            child: Text(
+              'Relatórios Salvos',
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: 22,
+                fontWeight: FontWeight.bold,
+              ),
             ),
           ),
         ],
