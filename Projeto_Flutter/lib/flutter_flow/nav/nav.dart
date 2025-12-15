@@ -103,18 +103,6 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           builder: (context, params) => SearchScreenWidget(),
         ),
         FFRoute(
-          name: ScheduleScreenWidget.routeName,
-          path: ScheduleScreenWidget.routePath,
-          builder: (context, params) => params.isEmpty
-              ? NavBarPage(initialPage: 'ScheduleScreen')
-              : ScheduleScreenWidget(),
-        ),
-        FFRoute(
-          name: AddNewCardScreenWidget.routeName,
-          path: AddNewCardScreenWidget.routePath,
-          builder: (context, params) => AddNewCardScreenWidget(),
-        ),
-        FFRoute(
           name: ProfileScreenWidget.routeName,
           path: ProfileScreenWidget.routePath,
           builder: (context, params) => params.isEmpty

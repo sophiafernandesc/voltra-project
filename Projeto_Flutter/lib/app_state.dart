@@ -16,6 +16,38 @@ class FFAppState extends ChangeNotifier {
     _instance = FFAppState._internal();
   }
 
+  String _userFirstName = '';
+  String get userFirstName => _userFirstName;
+  set userFirstName(String value) {
+    _userFirstName = value;
+  }
+
+  String _userLastName = '';
+  String get userLastName => _userLastName;
+  set userLastName(String value) {
+    _userLastName = value;
+  }
+
+  String _userEmail = '';
+  String get userEmail => _userEmail;
+  set userEmail(String value) {
+    _userEmail = value;
+  }
+
+  String _userId = ''; 
+  String get userId => _userId;
+  set userId(String value) {
+    _userId = value;
+  }
+
+  // --- [NOVO] Adicionado para corrigir o erro ---
+  String _trackerId = '';
+  String get trackerId => _trackerId;
+  set trackerId(String value) {
+    _trackerId = value;
+  }
+  // ---------------------------------------------
+
   Future initializePersistedState() async {
     prefs = await SharedPreferences.getInstance();
     _safeInit(() {
@@ -370,11 +402,5 @@ class FFAppState extends ChangeNotifier {
 void _safeInit(Function() initializeField) {
   try {
     initializeField();
-  } catch (_) {}
-}
-
-Future _safeInitAsync(Function() initializeField) async {
-  try {
-    await initializeField();
   } catch (_) {}
 }

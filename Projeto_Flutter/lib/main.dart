@@ -1,18 +1,25 @@
+import 'package:firebase_core/firebase_core.dart'; 
+import 'firebase_options.dart';
 import 'package:provider/provider.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
+
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_web_plugins/url_strategy.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import 'flutter_flow/flutter_flow_util.dart';
-import 'index.dart';
+import 'index.dart'; // Importa a nova tela daqui
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
+
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
+
   GoRouter.optionURLReflectsImperativeAPIs = true;
   usePathUrlStrategy();
 
-  final appState = FFAppState(); // Initialize FFAppState
+  final appState = FFAppState(); 
   await appState.initializePersistedState();
 
   runApp(ChangeNotifierProvider(
@@ -22,7 +29,6 @@ void main() async {
 }
 
 class MyApp extends StatefulWidget {
-  // This widget is the root of your application.
   @override
   State<MyApp> createState() => _MyAppState();
 
@@ -35,25 +41,10 @@ class _MyAppState extends State<MyApp> {
 
   late AppStateNotifier _appStateNotifier;
   late GoRouter _router;
-  String getRoute([RouteMatch? routeMatch]) {
-    final RouteMatch lastMatch =
-        routeMatch ?? _router.routerDelegate.currentConfiguration.last;
-    final RouteMatchList matchList = lastMatch is ImperativeRouteMatch
-        ? lastMatch.matches
-        : _router.routerDelegate.currentConfiguration;
-    return matchList.uri.toString();
-  }
-
-  List<String> getRouteStack() =>
-      _router.routerDelegate.currentConfiguration.matches
-          .map((e) => getRoute(e))
-          .toList();
-  bool displaySplashImage = true;
 
   @override
   void initState() {
     super.initState();
-
     _appStateNotifier = AppStateNotifier.instance;
     _router = createRouter(_appStateNotifier);
 
@@ -102,7 +93,6 @@ class NavBarPage extends StatefulWidget {
   _NavBarPageState createState() => _NavBarPageState();
 }
 
-/// This is the private State class that goes with NavBarPage.
 class _NavBarPageState extends State<NavBarPage> {
   String _currentPageName = 'HomeScreen';
   late Widget? _currentPage;
@@ -116,10 +106,11 @@ class _NavBarPageState extends State<NavBarPage> {
 
   @override
   Widget build(BuildContext context) {
+    // --- [ALTERAÇÃO 1] Atualizamos a lista de abas ---
     final tabs = {
       'HomeScreen': HomeScreenWidget(),
       'LocationScreen': LocationScreenWidget(),
-      'ScheduleScreen': ScheduleScreenWidget(),
+      'TrackerInfoScreen': TrackerInfoScreenWidget(), // Nova tela aqui
       'ProfileScreen': ProfileScreenWidget(),
     };
     final currentIndex = tabs.keys.toList().indexOf(_currentPageName);
@@ -127,79 +118,77 @@ class _NavBarPageState extends State<NavBarPage> {
     return Scaffold(
       resizeToAvoidBottomInset: !widget.disableResizeToAvoidBottomInset,
       body: _currentPage ?? tabs[_currentPageName],
-      bottomNavigationBar: BottomNavigationBar(
-        selectedFontSize: 0,
-        currentIndex: currentIndex,
-        onTap: (i) => safeSetState(() {
-          _currentPage = null;
-          _currentPageName = tabs.keys.toList()[i];
-        }),
-        backgroundColor: FlutterFlowTheme.of(context).primaryText,
-        selectedItemColor: FlutterFlowTheme.of(context).primary,
-        unselectedItemColor: FlutterFlowTheme.of(context).black40,
-        showSelectedLabels: true,
-        showUnselectedLabels: true,
-        type: BottomNavigationBarType.fixed,
-        items: <BottomNavigationBarItem>[
-          BottomNavigationBarItem(
-            icon: Icon(
-              FFIcons.khomeIc,
-              size: 32.0,
-            ),
-            activeIcon: Icon(
-              FFIcons.kacHome,
-              size: 32.0,
-            ),
-            label: '',
-            tooltip: '',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(
-              FFIcons.klocationIc,
-              size: 32.0,
-            ),
-            activeIcon: Icon(
-              FFIcons.kacLocation,
-              size: 32.0,
-            ),
-            label: '',
-            tooltip: '',
-          ),
-          BottomNavigationBarItem(
-            icon: SvgPicture.asset(
-              'assets/graph.svg',
-              width: 32.0,
-              height: 32.0,
-              colorFilter: ColorFilter.mode(
-                FlutterFlowTheme.of(context).black40, // mesma cor dos outros inativos
-                BlendMode.srcIn,
+      bottomNavigationBar: Container(
+        width: double.infinity,
+        height: 70.0, 
+        color: FlutterFlowTheme.of(context).primaryText, 
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceAround, 
+          crossAxisAlignment: CrossAxisAlignment.center,    
+          children: [
+            // 1. HOME
+            InkWell(
+              onTap: () => safeSetState(() {
+                _currentPage = null;
+                _currentPageName = tabs.keys.toList()[0];
+              }),
+              child: Icon(
+                currentIndex == 0 ? FFIcons.kacHome : FFIcons.khomeIc,
+                size: 32.0,
+                color: currentIndex == 0
+                    ? FlutterFlowTheme.of(context).primary
+                    : FlutterFlowTheme.of(context).black40,
               ),
             ),
-            activeIcon: SvgPicture.asset(
-              'assets/graph.svg',
-              width: 32.0,
-              height: 32.0,
-              colorFilter: ColorFilter.mode(
-                FlutterFlowTheme.of(context).primary, // mesma cor dos outros ativos
-                BlendMode.srcIn,
+
+            // 2. LOCALIZAÇÃO (MAPA)
+            InkWell(
+              onTap: () => safeSetState(() {
+                _currentPage = null;
+                _currentPageName = tabs.keys.toList()[1];
+              }),
+              child: Icon(
+                currentIndex == 1 ? FFIcons.kacLocation : FFIcons.klocationIc,
+                size: 32.0,
+                color: currentIndex == 1
+                    ? FlutterFlowTheme.of(context).primary
+                    : FlutterFlowTheme.of(context).black40,
               ),
             ),
-            label: '',
-            tooltip: '',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(
-              Icons.person_outline_sharp,
-              size: 32.0,
+
+            // 3. STATUS DO RASTREADOR (ANTIGO GRÁFICO)
+            // --- [ALTERAÇÃO 2] Mudamos o ícone para um Carro ---
+            InkWell(
+              onTap: () => safeSetState(() {
+                _currentPage = null;
+                _currentPageName = tabs.keys.toList()[2];
+              }),
+              child: Icon(
+                // Usa ícone preenchido se selecionado, contorno se não
+                currentIndex == 2 ? Icons.directions_car_filled : Icons.directions_car_outlined,
+                size: 32.0,
+                color: currentIndex == 2
+                    ? FlutterFlowTheme.of(context).primary
+                    : FlutterFlowTheme.of(context).black40,
+              ),
             ),
-            activeIcon: Icon(
-              FFIcons.kacProfile,
-              size: 32.0,
+
+            // 4. PERFIL
+            InkWell(
+              onTap: () => safeSetState(() {
+                _currentPage = null;
+                _currentPageName = tabs.keys.toList()[3];
+              }),
+              child: Icon(
+                currentIndex == 3 ? FFIcons.kacProfile : Icons.person_outline_sharp,
+                size: 32.0,
+                color: currentIndex == 3
+                    ? FlutterFlowTheme.of(context).primary
+                    : FlutterFlowTheme.of(context).black40,
+              ),
             ),
-            label: '',
-            tooltip: '',
-          )
-        ],
+          ],
+        ),
       ),
     );
   }

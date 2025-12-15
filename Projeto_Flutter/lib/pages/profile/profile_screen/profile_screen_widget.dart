@@ -10,6 +10,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'profile_screen_model.dart';
 export 'profile_screen_model.dart';
 
+
 class ProfileScreenWidget extends StatefulWidget {
   const ProfileScreenWidget({super.key});
 
@@ -215,7 +216,7 @@ class _ProfileScreenWidgetState extends State<ProfileScreenWidget>
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
                                   Text(
-                                    'Usuario teste',
+                                    '${FFAppState().userFirstName} ${FFAppState().userLastName}',
                                     style: FlutterFlowTheme.of(context)
                                         .bodyMedium
                                         .override(
@@ -229,7 +230,7 @@ class _ProfileScreenWidgetState extends State<ProfileScreenWidget>
                                         ),
                                   ),
                                   Text(
-                                    'usuario@gmail.com',
+                                    FFAppState().userEmail,
                                     textAlign: TextAlign.center,
                                     style: FlutterFlowTheme.of(context)
                                         .bodyMedium

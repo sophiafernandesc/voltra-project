@@ -234,214 +234,218 @@ class _HomeScreenWidgetState extends State<HomeScreenWidget>
                           ),
 
                           // Three blue info cards
-                          Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
-                                20.0, 6.0, 20.0, 20.0),
-                            child: Column(
-                              children: [
-                                // Card 1
-                                Container(
-                                  width: double.infinity,
-                                  decoration: BoxDecoration(
-                                    color: FlutterFlowTheme.of(context).blue,
-                                    borderRadius: BorderRadius.circular(12.0),
-                                  ),
-                                  padding: EdgeInsetsDirectional.fromSTEB(
-                                      16.0, 12.0, 16.0, 12.0),
-                                  child: Row(
-                                    children: [
-                                      Container(
-                                        width: 56.0,
-                                        height: 56.0,
-                                        decoration: BoxDecoration(
-                                          color: Colors.white24,
-                                          borderRadius:
-                                              BorderRadius.circular(12.0),
-                                        ),
-                                        child: Padding(
-                                          padding: EdgeInsets.all(8.0),
-                                          child: Image.asset(
-                                            'assets/images/posto-de-gasolina.png',
-                                            width: 32.0,
-                                            height: 32.0,
-                                            fit: BoxFit.contain,
-                                          ),
-                                        ),
+                          Expanded(
+                            child: Padding(
+                              padding: EdgeInsetsDirectional.fromSTEB(
+                                  20.0, 6.0, 20.0, 20.0),
+                              child: SingleChildScrollView(
+                                child: Column(
+                                  children: [
+                                    // Card 1
+                                    Container(
+                                      width: double.infinity,
+                                      decoration: BoxDecoration(
+                                        color: FlutterFlowTheme.of(context).blue,
+                                        borderRadius: BorderRadius.circular(12.0),
                                       ),
-                                      Expanded(
-                                        child: Padding(
-                                          padding: EdgeInsetsDirectional.fromSTEB(
-                                              16.0, 0.0, 0.0, 0.0),
-                                          child: Column(
-                                            crossAxisAlignment:
-                                                CrossAxisAlignment.center,
-                                            children: [
-                                              Text(
-                                                '100 L',
-                                                style: FlutterFlowTheme.of(context)
-                                                    .bodyMedium
-                                                    .override(
-                                                      fontFamily: 'Satoshi',
-                                                      color: Colors.white,
-                                                      fontSize: 22.0,
-                                                      fontWeight:
-                                                          FontWeight.bold,
-                                                    ),
+                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                          16.0, 12.0, 16.0, 12.0),
+                                      child: Row(
+                                        children: [
+                                          Container(
+                                            width: 56.0,
+                                            height: 56.0,
+                                            decoration: BoxDecoration(
+                                              color: Colors.white24,
+                                              borderRadius:
+                                                  BorderRadius.circular(12.0),
+                                            ),
+                                            child: Padding(
+                                              padding: EdgeInsets.all(8.0),
+                                              child: Image.asset(
+                                                'assets/images/posto-de-gasolina.png',
+                                                width: 32.0,
+                                                height: 32.0,
+                                                fit: BoxFit.contain,
                                               ),
-                                              Text(
-                                                'Gasolina total gasta',
-                                                style: FlutterFlowTheme.of(context)
-                                                    .bodySmall
-                                                    .override(
-                                                      fontFamily: 'Satoshi',
-                                                      color: Colors.white70,
-                                                      fontSize: 12.0,
-                                                    ),
-                                              ),
-                                            ],
+                                            ),
                                           ),
-                                        ),
+                                          Expanded(
+                                            child: Padding(
+                                              padding: EdgeInsetsDirectional.fromSTEB(
+                                                  16.0, 0.0, 0.0, 0.0),
+                                              child: Column(
+                                                crossAxisAlignment:
+                                                    CrossAxisAlignment.center,
+                                                children: [
+                                                  Text(
+                                                    '100 L',
+                                                    style: FlutterFlowTheme.of(context)
+                                                        .bodyMedium
+                                                        .override(
+                                                          fontFamily: 'Satoshi',
+                                                          color: Colors.white,
+                                                          fontSize: 22.0,
+                                                          fontWeight:
+                                                              FontWeight.bold,
+                                                        ),
+                                                  ),
+                                                  Text(
+                                                    'Gasolina total gasta',
+                                                    style: FlutterFlowTheme.of(context)
+                                                        .bodySmall
+                                                        .override(
+                                                          fontFamily: 'Satoshi',
+                                                          color: Colors.white70,
+                                                          fontSize: 12.0,
+                                                        ),
+                                                  ),
+                                                ],
+                                              ),
+                                            ),
+                                          ),
+                                        ],
                                       ),
-                                    ],
-                                  ),
-                                ),
-                                SizedBox(height: 12.0),
+                                    ),
+                                    SizedBox(height: 12.0),
 
-                                // Card 2
-                                Container(
-                                  width: double.infinity,
-                                  decoration: BoxDecoration(
-                                    color: FlutterFlowTheme.of(context).blue,
-                                    borderRadius: BorderRadius.circular(12.0),
-                                  ),
-                                  padding: EdgeInsetsDirectional.fromSTEB(
-                                      16.0, 12.0, 16.0, 12.0),
-                                  child: Row(
-                                    children: [
-                                      Container(
-                                        width: 56.0,
-                                        height: 56.0,
-                                        decoration: BoxDecoration(
-                                          color: Colors.white24,
-                                          borderRadius:
-                                              BorderRadius.circular(12.0),
-                                        ),
-                                        child: Padding(
-                                          padding: EdgeInsets.all(8.0),
-                                          child: Image.asset(
-                                            'assets/images/estrada.png',
-                                            width: 32.0,
-                                            height: 32.0,
-                                            fit: BoxFit.contain,
-                                          ),
-                                        ),
+                                    // Card 2
+                                    Container(
+                                      width: double.infinity,
+                                      decoration: BoxDecoration(
+                                        color: FlutterFlowTheme.of(context).blue,
+                                        borderRadius: BorderRadius.circular(12.0),
                                       ),
-                                      Expanded(
-                                        child: Padding(
-                                          padding: EdgeInsetsDirectional.fromSTEB(
-                                              16.0, 0.0, 0.0, 0.0),
-                                          child: Column(
-                                            crossAxisAlignment:
-                                                CrossAxisAlignment.center,
-                                            children: [
-                                              Text(
-                                                '1000 km',
-                                                style: FlutterFlowTheme.of(context)
-                                                    .bodyMedium
-                                                    .override(
-                                                      fontFamily: 'Satoshi',
-                                                      color: Colors.white,
-                                                      fontSize: 22.0,
-                                                      fontWeight:
-                                                          FontWeight.bold,
-                                                    ),
+                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                          16.0, 12.0, 16.0, 12.0),
+                                      child: Row(
+                                        children: [
+                                          Container(
+                                            width: 56.0,
+                                            height: 56.0,
+                                            decoration: BoxDecoration(
+                                              color: Colors.white24,
+                                              borderRadius:
+                                                  BorderRadius.circular(12.0),
+                                            ),
+                                            child: Padding(
+                                              padding: EdgeInsets.all(8.0),
+                                              child: Image.asset(
+                                                'assets/images/estrada.png',
+                                                width: 32.0,
+                                                height: 32.0,
+                                                fit: BoxFit.contain,
                                               ),
-                                              Text(
-                                                'Distância percorrida',
-                                                style: FlutterFlowTheme.of(context)
-                                                    .bodySmall
-                                                    .override(
-                                                      fontFamily: 'Satoshi',
-                                                      color: Colors.white70,
-                                                      fontSize: 12.0,
-                                                    ),
-                                              ),
-                                            ],
+                                            ),
                                           ),
-                                        ),
+                                          Expanded(
+                                            child: Padding(
+                                              padding: EdgeInsetsDirectional.fromSTEB(
+                                                  16.0, 0.0, 0.0, 0.0),
+                                              child: Column(
+                                                crossAxisAlignment:
+                                                    CrossAxisAlignment.center,
+                                                children: [
+                                                  Text(
+                                                    '1000 km',
+                                                    style: FlutterFlowTheme.of(context)
+                                                        .bodyMedium
+                                                        .override(
+                                                          fontFamily: 'Satoshi',
+                                                          color: Colors.white,
+                                                          fontSize: 22.0,
+                                                          fontWeight:
+                                                              FontWeight.bold,
+                                                        ),
+                                                  ),
+                                                  Text(
+                                                    'Distância percorrida',
+                                                    style: FlutterFlowTheme.of(context)
+                                                        .bodySmall
+                                                        .override(
+                                                          fontFamily: 'Satoshi',
+                                                          color: Colors.white70,
+                                                          fontSize: 12.0,
+                                                        ),
+                                                  ),
+                                                ],
+                                              ),
+                                            ),
+                                          ),
+                                        ],
                                       ),
-                                    ],
-                                  ),
-                                ),
-                                SizedBox(height: 12.0),
+                                    ),
+                                    SizedBox(height: 12.0),
 
-                                // Card 3
-                                Container(
-                                  width: double.infinity,
-                                  decoration: BoxDecoration(
-                                    color: FlutterFlowTheme.of(context).blue,
-                                    borderRadius: BorderRadius.circular(12.0),
-                                  ),
-                                  padding: EdgeInsetsDirectional.fromSTEB(
-                                      16.0, 12.0, 16.0, 12.0),
-                                  child: Row(
-                                    children: [
-                                      Container(
-                                        width: 56.0,
-                                        height: 56.0,
-                                        decoration: BoxDecoration(
-                                          color: Colors.white24,
-                                          borderRadius:
-                                              BorderRadius.circular(12.0),
-                                        ),
-                                        child: Padding(
-                                          padding: EdgeInsets.all(8.0),
-                                          child: Image.asset(
-                                            'assets/images/velocimetro.png',
-                                            width: 32.0,
-                                            height: 32.0,
-                                            fit: BoxFit.contain,
-                                          ),
-                                        ),
+                                    // Card 3
+                                    Container(
+                                      width: double.infinity,
+                                      decoration: BoxDecoration(
+                                        color: FlutterFlowTheme.of(context).blue,
+                                        borderRadius: BorderRadius.circular(12.0),
                                       ),
-                                      Expanded(
-                                        child: Padding(
-                                          padding: EdgeInsetsDirectional.fromSTEB(
-                                              16.0, 0.0, 0.0, 0.0),
-                                          child: Column(
-                                            crossAxisAlignment:
-                                                CrossAxisAlignment.center,
-                                            children: [
-                                              Text(
-                                                '50 km/hr',
-                                                style: FlutterFlowTheme.of(context)
-                                                    .bodyMedium
-                                                    .override(
-                                                      fontFamily: 'Satoshi',
-                                                      color: Colors.white,
-                                                      fontSize: 22.0,
-                                                      fontWeight:
-                                                          FontWeight.bold,
-                                                    ),
+                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                          16.0, 12.0, 16.0, 12.0),
+                                      child: Row(
+                                        children: [
+                                          Container(
+                                            width: 56.0,
+                                            height: 56.0,
+                                            decoration: BoxDecoration(
+                                              color: Colors.white24,
+                                              borderRadius:
+                                                  BorderRadius.circular(12.0),
+                                            ),
+                                            child: Padding(
+                                              padding: EdgeInsets.all(8.0),
+                                              child: Image.asset(
+                                                'assets/images/velocimetro.png',
+                                                width: 32.0,
+                                                height: 32.0,
+                                                fit: BoxFit.contain,
                                               ),
-                                              Text(
-                                                'Velocidade média',
-                                                style: FlutterFlowTheme.of(context)
-                                                    .bodySmall
-                                                    .override(
-                                                      fontFamily: 'Satoshi',
-                                                      color: Colors.white70,
-                                                      fontSize: 12.0,
-                                                    ),
-                                              ),
-                                            ],
+                                            ),
                                           ),
-                                        ),
+                                          Expanded(
+                                            child: Padding(
+                                              padding: EdgeInsetsDirectional.fromSTEB(
+                                                  16.0, 0.0, 0.0, 0.0),
+                                              child: Column(
+                                                crossAxisAlignment:
+                                                    CrossAxisAlignment.center,
+                                                children: [
+                                                  Text(
+                                                    '50 km/hr',
+                                                    style: FlutterFlowTheme.of(context)
+                                                        .bodyMedium
+                                                        .override(
+                                                          fontFamily: 'Satoshi',
+                                                          color: Colors.white,
+                                                          fontSize: 22.0,
+                                                          fontWeight:
+                                                              FontWeight.bold,
+                                                        ),
+                                                  ),
+                                                  Text(
+                                                    'Velocidade média',
+                                                    style: FlutterFlowTheme.of(context)
+                                                        .bodySmall
+                                                        .override(
+                                                          fontFamily: 'Satoshi',
+                                                          color: Colors.white70,
+                                                          fontSize: 12.0,
+                                                        ),
+                                                  ),
+                                                ],
+                                              ),
+                                            ),
+                                          ),
+                                        ],
                                       ),
-                                    ],
-                                  ),
+                                    ),
+                                  ],
                                 ),
-                              ],
+                              ),
                             ),
                           ),
                         ],

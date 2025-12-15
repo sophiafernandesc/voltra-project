@@ -110,7 +110,7 @@ class _SplashScreenWidgetState extends State<SplashScreenWidget>
                       animationsMap['circleImageOnPageLoadAnimation']!),
                 ),
                 Text(
-                  'Voltracar',
+                  'Voltra',
                   style: FlutterFlowTheme.of(context).bodyMedium.override(
                         fontFamily: 'Satoshi',
                         color: FlutterFlowTheme.of(context).tertiary,

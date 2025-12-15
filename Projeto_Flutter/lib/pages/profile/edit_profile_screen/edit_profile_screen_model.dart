@@ -1,66 +1,63 @@
 import '/flutter_flow/flutter_flow_util.dart';
-import '/pages/component/custom_center_appbar/custom_center_appbar_widget.dart';
 import 'edit_profile_screen_widget.dart' show EditProfileScreenWidget;
 import 'package:flutter/material.dart';
+
+// [IMPORTANTE] Importar o model do componente de AppBar
+// Se der erro de caminho, verifique se o arquivo existe em /pages/component/...
+import '/pages/component/custom_center_appbar/custom_center_appbar_widget.dart'; 
+// Nota: Em alguns projetos FlutterFlow, o Model pode estar em um arquivo separado como 'custom_center_appbar_model.dart'.
+// Se o import acima não trouxer o 'CustomCenterAppbarModel', tente:
+// import '/pages/component/custom_center_appbar/custom_center_appbar_model.dart';
 
 class EditProfileScreenModel extends FlutterFlowModel<EditProfileScreenWidget> {
   ///  State fields for stateful widgets in this page.
 
   final formKey = GlobalKey<FormState>();
-  // Model for CustomCenterAppbar component.
+
+  // --- [NOVO] Model do Componente AppBar ---
+  // Isso resolve o erro "getter customCenterAppbarModel isn't defined"
   late CustomCenterAppbarModel customCenterAppbarModel;
+
+  // Controle de Upload de Imagem
   bool isDataUploading_uploadData3zd = false;
   FFUploadedFile uploadedLocalFile_uploadData3zd =
       FFUploadedFile(bytes: Uint8List.fromList([]));
 
-  // State field(s) for TextField widget.
+  // --- Campos de Texto ---
+
+  // Primeiro Nome
   FocusNode? textFieldFocusNode1;
   TextEditingController? textController1;
   String? Function(BuildContext, String?)? textController1Validator;
-  String? _textController1Validator(BuildContext context, String? val) {
-    if (val == null || val.isEmpty) {
-      return 'Please enter valid first name';
-    }
 
-    return null;
-  }
-
-  // State field(s) for TextField widget.
+  // Último Nome
   FocusNode? textFieldFocusNode2;
   TextEditingController? textController2;
   String? Function(BuildContext, String?)? textController2Validator;
-  String? _textController2Validator(BuildContext context, String? val) {
-    if (val == null || val.isEmpty) {
-      return 'Please enter valid last name';
-    }
 
-    return null;
-  }
-
-  // State field(s) for TextField widget.
+  // Email
   FocusNode? textFieldFocusNode3;
   TextEditingController? textController3;
   String? Function(BuildContext, String?)? textController3Validator;
-  String? _textController3Validator(BuildContext context, String? val) {
-    if (val == null || val.isEmpty) {
-      return 'Please enter valid email address';
-    }
 
-    return null;
-  }
+  // ID do Rastreador
+  FocusNode? textFieldFocusNode4;
+  TextEditingController? textController4;
+  String? Function(BuildContext, String?)? textController4Validator;
 
+  /// Inicialização
   @override
   void initState(BuildContext context) {
-    customCenterAppbarModel =
-        createModel(context, () => CustomCenterAppbarModel());
-    textController1Validator = _textController1Validator;
-    textController2Validator = _textController2Validator;
-    textController3Validator = _textController3Validator;
+    // [NOVO] Inicializa o model do AppBar
+    customCenterAppbarModel = createModel(context, () => CustomCenterAppbarModel());
   }
 
+  /// Limpeza de memória
   @override
   void dispose() {
+    // [NOVO] Descarta o model do AppBar
     customCenterAppbarModel.dispose();
+
     textFieldFocusNode1?.dispose();
     textController1?.dispose();
 
@@ -69,5 +66,8 @@ class EditProfileScreenModel extends FlutterFlowModel<EditProfileScreenWidget> {
 
     textFieldFocusNode3?.dispose();
     textController3?.dispose();
+
+    textFieldFocusNode4?.dispose();
+    textController4?.dispose();
   }
 }
