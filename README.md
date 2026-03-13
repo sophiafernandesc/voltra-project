@@ -1,19 +1,18 @@
 # VOLTRA⚡
 
-> Aplicativo de gestão inteligente para veículos elétricos, híbridos e a combustão – com foco em mobilidade, segurança e eficiência energética.
+> Aplicativo de gestão inteligente de combustível para motoristas de carros de motores a combustão. O app tem como objetivo informar o usuário o consumo de combustível, além disso através do hardware (esp32 + módulo GPS) informar a última rota percorrida.
 
 [![GitHub Repo](https://img.shields.io/badge/GitHub-SophiaCFernandes/Voltra-blue?logo=github)](https://github.com/SophiaCFernandes/Voltra/edit/main/README.md)
 
 ---
 
-## 📱 Visão Geral
+## 📎 Visão Geral
 
-**VOLTRA** é um aplicativo mobile multiplataforma (com foco inicial em Android) projetado para melhorar a experiência de motoristas em diferentes frentes:  
-- Carregamento de veículos elétricos  
+**VOLTRA** é um aplicativo mobile Android projetado para melhorar a experiência de motoristas em diferentes frentes:  
 - Avaliação de combustível para veículos a combustão  
 - Monitoramento e segurança veicular
 
-O projeto está sendo desenvolvido como parte da disciplina de **Desenvolvimento Mobile**, mas com a ambição técnica de ultrapassar o tradicional MVP acadêmico genérico.
+O projeto está sendo desenvolvido como parte da disciplina de **Desenvolvimento Mobile**, mas posteriormente pretendemos adicionar mais funcionalidades.
 
 ---
 
@@ -93,16 +92,11 @@ Repositório Figma: https://www.figma.com/design/FsyTdu0DmyYDz0sEgpbS6h/Voltra?n
 ## 🛠️ Tecnologias e Ferramentas
 
 - **Figma** – Prototipação e UI Design  
-- **Flutter** (a definir) – Desenvolvimento mobile  
-- **Mapbox API** – Geolocalização e visualização de estações  
+- **Flutter** – Desenvolvimento mobile  
+- **Mapbox API** – Geolocalização
 - **Firebase** – Autenticação, notificações e backend básico  
-- **ESP32+ Sensores** – Simulação da análise de combustível
+- **ESP32+ Sensores** – Modulo Gps Para Arduino Esp32 Neo-6m Gy Neo6mv2
 
 ---
 
 
-## 📎 Contribuição
-
-Como este é um projeto acadêmico em grupo, colaborações são bem-vindas. Se você faz parte do time e quer adicionar sua ideia ao caos organizado que chamamos de "app", abra uma issue ou envie um pull request.
-
----
