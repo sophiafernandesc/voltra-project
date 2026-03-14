@@ -82,6 +82,13 @@ Repositório Figma: https://www.figma.com/design/FsyTdu0DmyYDz0sEgpbS6h/Voltra?n
  ![Hardware do Voltra - ESP32 e Sensores](./assets/hardware.png)
 ---
 
+## Vídeo funcionamento Scanner OBDII
+
+<video src="./assets/video/scannerOBD.mp4" controls="controls" width="100%">
+</video>
+
+---
+
 ##  Slide
 ![Slide 1](./assets/1.png)
 ![Slide 2](./assets/2.png)
@@ -95,7 +102,7 @@ Repositório Figma: https://www.figma.com/design/FsyTdu0DmyYDz0sEgpbS6h/Voltra?n
 ![Slide 10](./assets/10.png)
 ![Slide 11](./assets/11.png)
 ![Slide 12](./assets/12.png)
-![Slide 13](./assets/13.png)
-![Slide 14](./assets/14.png)
 ![Slide 15](./assets/15.png)
+
+
 
