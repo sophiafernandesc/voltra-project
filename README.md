@@ -34,20 +34,7 @@ Motoristas brasileiros que:
 
 ---
 
-### 🔋 Veículos Elétricos e Híbridos
-
-- **Fila Virtual para Carregamento**  
-  Através da leitura de um QR Code na estação, o motorista entra em uma fila digital e pode monitorar o tempo estimado até sua vez.
-
-- **Mapa Interativo (Mapbox API)**  
-  Exibição das estações de carregamento em BH, com informações em tempo real sobre disponibilidade e status.
-
-- **Feedback da Estação**  
-  Sistema de avaliação das estações com base na experiência dos usuários.
-
----
-
-### ⛽ Veículos a Combustão
+###  Veículos a Combustão
 
 - **Avaliação da Qualidade de Combustível**  
   Histórico de abastecimento e desempenho, utilizando sensores e análise dos dados de consumo (simulação via Arduino com potenciômetros).
@@ -57,7 +44,7 @@ Motoristas brasileiros que:
 
 ---
 
-### 🔐 Segurança Veicular
+### Segurança Veicular
 
 - **Localização em Tempo Real**  
   Monitoramento contínuo da posição do veículo.
@@ -73,7 +60,7 @@ Motoristas brasileiros que:
 
 ---
 
-## 🖼️ Interface (UI/UX)
+## Interface (UI/UX)
 
 Repositório Figma: https://www.figma.com/design/FsyTdu0DmyYDz0sEgpbS6h/Voltra?node-id=28-159&p=f&t=LWggTVPleiLZkM7w-0
 ### Estrutura de Telas:
@@ -87,7 +74,7 @@ Repositório Figma: https://www.figma.com/design/FsyTdu0DmyYDz0sEgpbS6h/Voltra?n
 
 ---
 
-## 🛠️ Tecnologias e Ferramentas
+## Tecnologias e Ferramentas
 
 - **Figma** – Prototipação e UI Design  
 - **Flutter** – Desenvolvimento mobile  
