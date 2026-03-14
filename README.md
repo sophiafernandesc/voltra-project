@@ -1,4 +1,4 @@
-# VOLTRA⚡
+# VOLTRA
 
 > Aplicativo de gestão inteligente de combustível para motoristas de carros de motores a combustão. O app tem como objetivo informar o usuário o consumo de combustível, além disso através do hardware (esp32 + módulo GPS) informar a última rota percorrida.
 
@@ -16,7 +16,7 @@ O projeto está sendo desenvolvido como parte da disciplina de **Desenvolvimento
 
 ---
 
-## 🎯 Objetivos
+##  Objetivos
 
 - Otimizar o acesso a estações de carregamento elétrico em Belo Horizonte através de uma **fila virtual inteligente**
 - Ajudar usuários a **identificar combustível de baixa qualidade** e evitar prejuízos mecânicos
@@ -25,7 +25,7 @@ O projeto está sendo desenvolvido como parte da disciplina de **Desenvolvimento
 
 ---
 
-## 👥 Público-Alvo
+##  Público-Alvo
 
 Motoristas brasileiros que:
 - Utilizam veículos elétricos ou híbridos e enfrentam dificuldades para encontrar estações de carregamento
@@ -33,8 +33,6 @@ Motoristas brasileiros que:
 - Buscam mais segurança e controle sobre a localização e uso dos seus carros
 
 ---
-
-## ⚙️ Funcionalidades
 
 ### 🔋 Veículos Elétricos e Híbridos
 
@@ -98,5 +96,7 @@ Repositório Figma: https://www.figma.com/design/FsyTdu0DmyYDz0sEgpbS6h/Voltra?n
 - **ESP32+ Sensores** – Modulo Gps Para Arduino Esp32 Neo-6m Gy Neo6mv2
 
 ---
+
+[📄 Clique aqui para ver a apresentação completa do projeto](./assets/apresentacao_voltra.pdf)
 
 
