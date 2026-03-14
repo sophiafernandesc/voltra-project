@@ -59,6 +59,7 @@ Buscam mais segurança e controle sobre a localização e uso dos seus carros
 ##  Interface (UI/UX)
 
 Repositório Figma: https://www.figma.com/design/FsyTdu0DmyYDz0sEgpbS6h/Voltra?node-id=28-159&p=f&t=LWggTVPleiLZkM7w-0
+
 ### Estrutura de Telas:
 - **Tela de Boas-Vindas / Onboarding**
 - **Login e Cadastro de Usuário**
@@ -78,6 +79,23 @@ Repositório Figma: https://www.figma.com/design/FsyTdu0DmyYDz0sEgpbS6h/Voltra?n
  **Firebase** – Autenticação, notificações e backend básico  
  **ESP32+ Sensores** – Modulo Gps Para Arduino Esp32 Neo-6m Gy Neo6mv2
 
+ ![Hardware do Voltra - ESP32 e Sensores](./assets/hardware.png)
 ---
 
+##  Slide
+![Slide 1](./apresentacao_voltra/assets/1.png)
+![Slide 2](./apresentacao_voltra/assets/2.png)
+![Slide 3](./apresentacao_voltra/assets/3.png)
+![Slide 4](./apresentacao_voltra/assets/4.png)
+![Slide 5](./apresentacao_voltra/assets/5.png)
+![Slide 6](./apresentacao_voltra/assets/6.png)
+![Slide 7](./apresentacao_voltra/assets/7.png)
+![Slide 8](./apresentacao_voltra/assets/8.png)
+![Slide 9](./apresentacao_voltra/assets/9.png)
+![Slide 10](./apresentacao_voltra/assets/10.png)
+![Slide 11](./apresentacao_voltra/assets/11.png)
+![Slide 12](./apresentacao_voltra/assets/12.png)
+![Slide 13](./apresentacao_voltra/assets/13.png)
+![Slide 14](./apresentacao_voltra/assets/14.png)
+![Slide 15](./apresentacao_voltra/assets/15.png)
 
