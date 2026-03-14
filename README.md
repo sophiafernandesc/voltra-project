@@ -2,8 +2,6 @@
 
 > Aplicativo de gestão inteligente de combustível para motoristas de carros de motores a combustão. O app tem como objetivo informar o usuário o consumo de combustível, além disso através do hardware (esp32 + módulo GPS) informar a última rota percorrida.
 
-[![GitHub Repo](https://img.shields.io/badge/GitHub-SophiaCFernandes/Voltra-blue?logo=github)](https://github.com/SophiaCFernandes/Voltra/edit/main/README.md)
-
 ---
 
 ## 📎 Visão Geral
@@ -18,7 +16,6 @@ O projeto está sendo desenvolvido como parte da disciplina de **Desenvolvimento
 
 ## 🎯 Objetivos
 
-- Otimizar o acesso a estações de carregamento elétrico em Belo Horizonte através de uma **fila virtual inteligente**
 - Ajudar usuários a **identificar combustível de baixa qualidade** e evitar prejuízos mecânicos
 - Oferecer um sistema de **rastreamento e segurança veicular** com monitoramento em tempo real
 - Centralizar múltiplas necessidades do motorista em uma única interface intuitiva
@@ -28,24 +25,8 @@ O projeto está sendo desenvolvido como parte da disciplina de **Desenvolvimento
 ## 👥 Público-Alvo
 
 Motoristas brasileiros que:
-- Utilizam veículos elétricos ou híbridos e enfrentam dificuldades para encontrar estações de carregamento
 - Desejam monitorar o desempenho de combustível dos seus veículos a combustão
 - Buscam mais segurança e controle sobre a localização e uso dos seus carros
-
----
-
-## ⚙️ Funcionalidades
-
-### 🔋 Veículos Elétricos e Híbridos
-
-- **Fila Virtual para Carregamento**  
-  Através da leitura de um QR Code na estação, o motorista entra em uma fila digital e pode monitorar o tempo estimado até sua vez.
-
-- **Mapa Interativo (Mapbox API)**  
-  Exibição das estações de carregamento em BH, com informações em tempo real sobre disponibilidade e status.
-
-- **Feedback da Estação**  
-  Sistema de avaliação das estações com base na experiência dos usuários.
 
 ---
 
@@ -54,7 +35,7 @@ Motoristas brasileiros que:
 - **Avaliação da Qualidade de Combustível**  
   Histórico de abastecimento e desempenho, utilizando sensores e análise dos dados de consumo (simulação via Arduino com potenciômetros).
 
-- **Conformidade Legal**  
+- **Tracking de desempenho do veículo com determinado combustível**  
   Indicação se o combustível atende os padrões da legislação brasileira.
 
 ---
