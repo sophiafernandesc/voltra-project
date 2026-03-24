@@ -30,16 +30,6 @@ Buscam mais segurança e controle sobre a localização e uso dos seus carros
 
 ---
 
-###  Veículos a Combustão
-
-- **Avaliação da Qualidade de Combustível**  
-  Histórico de abastecimento e desempenho, utilizando sensores e análise dos dados de consumo (simulação via Arduino com potenciômetros).
-
-- **Tracking de desempenho do veículo com determinado combustível**  
-  Indicação se o combustível atende os padrões da legislação brasileira.
-
----
-
 ###  Segurança Veicular
 
  **Localização em Tempo Real**  
@@ -64,10 +54,8 @@ Repositório Figma: https://www.figma.com/design/FsyTdu0DmyYDz0sEgpbS6h/Voltra?n
 - **Tela de Boas-Vindas / Onboarding**
 - **Login e Cadastro de Usuário**
 - **Tela Principal (Mapa Interativo)**
-- **Fila Virtual de Carregamento**
 - **Histórico de Trajetos e Abastecimentos**
 - **Perfil e Configurações do Veículo**
-- **Central de Segurança e Notificações**
 
 ---
 
