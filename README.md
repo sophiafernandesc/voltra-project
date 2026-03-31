@@ -72,9 +72,7 @@ Repositório Figma: https://www.figma.com/design/FsyTdu0DmyYDz0sEgpbS6h/Voltra?n
 
 ## Vídeo funcionamento Scanner OBDII
 
-<video src="https://raw.githubusercontent.com/sophiafernandesc/voltra-project/main/assets/video/scannerOBD.mp4git" controls="controls" width="100%">
-</video>
-
+https://github.com/user-attachments/assets/af402bfc-283b-4785-9621-8a7dd544c1e7
 
 ---
 
